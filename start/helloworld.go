@@ -6,12 +6,7 @@ import (
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
-)
-
-// constant width and height window
-const (
-	width  = 400
-	height = 600
+	"go_fyne_demo/config"
 )
 
 func main() {
@@ -20,7 +15,7 @@ func main() {
 	// For instance class Window
 	window := application.NewWindow("hello world")
 	// Resizing width and height window
-	window.Resize(fyne.NewSize(width, height))
+	window.Resize(fyne.NewSize(config.Width, config.Height))
 	// Set content window with label
 	window.SetContent(container.NewVBox(
 		widget.NewLabel("Hello World!!"),
