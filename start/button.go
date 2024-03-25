@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+	// Variable for trigger button every click increment
+	var like int
 	// For instance class App
 	application := app.New()
 	// For instance class Window
@@ -22,7 +24,8 @@ func main() {
 		// Set New Button
 		widget.NewButton("click!!", func() {
 			// Trigger every button clicked
-			fmt.Println("clicked")
+			like++
+			fmt.Println(like)
 		}),
 	))
 	// Logging
