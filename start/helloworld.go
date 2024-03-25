@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	width  float32 = 64
-	height float32 = 64
+	width  float32 = 600
+	height float32 = 400
 )
 
 func main() {
