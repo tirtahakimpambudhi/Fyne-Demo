@@ -11,7 +11,9 @@ import (
 
 func main() {
 	// Variable for trigger button every click increment
-	var like int
+	var count int
+	// Variable to contains count
+	likeLabel := widget.NewLabel("")
 	// For instance class App
 	application := app.New()
 	// For instance class Window
@@ -24,12 +26,17 @@ func main() {
 		// Set New Button
 		widget.NewButton("click!!", func() {
 			// Trigger every button clicked
-			like++
-			fmt.Println(like)
+			count++
+			updateLikeLabel(likeLabel, count) // Update likeLabel every time the button is clicked
 		}),
+		likeLabel,
 	))
 	// Logging
 	fmt.Println("Running Application")
 	// Showing window
 	window.ShowAndRun()
+}
+
+func updateLikeLabel(likeLabel *widget.Label, count int) {
+	likeLabel.SetText(fmt.Sprintf("Like : %d", count))
 }
